@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-slate-100 tracking-tight
+  /* input,
+  textarea {
+    @apply border p-4 block w-full rounded-lg;
+  } */
+  button {
+    @apply btn-xs md:btn lg:btn-md;
   }
 }
