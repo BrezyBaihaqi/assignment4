@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  /* input,
-  textarea {
-    @apply border p-4 block w-full rounded-lg;
-  } */
+  * {
+    @apply font-display;
+  }
   button {
     @apply btn-xs md:btn lg:btn-md;
   }

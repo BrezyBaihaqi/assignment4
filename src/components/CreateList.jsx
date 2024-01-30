@@ -34,49 +34,57 @@ export const CreateList = () => {
 
   return (
     <main className="card card-compact w-96 bg-base-100 shadow-md">
-      <div className="card-body">
-        <input
-          type="text"
-          placeholder="book name"
-          className="input input-bordered input-xs w-full max-w-xs card-title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        />
-        <div>
+      <div className="card-body items-center">
+        <div className="w-80">
           <input
-            type="date"
-            placeholder="Begin Read"
-            className="input input-bordered input-xs w-full max-w-xs card-title"
-            value={begin}
-            onChange={(e) => setBegin(e.target.value)}
+            type="text"
+            placeholder="book name"
+            className="input input-bordered input-md w-full max-w-lg card-title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
             required
           />
-          <input
-            type="date"
-            placeholder="Finish Read"
-            className="input input-bordered input-xs w-full max-w-xs card-title"
-            value={finish}
-            onChange={(e) => setFinish(e.target.value)}
+          <div className="grid grid-cols-2 gap-2">
+            <div>
+              <p className="ml-1 text-xs">Begin read</p>
+              <input
+                type="date"
+                placeholder="Begin Read"
+                className="input input-bordered input-xs w-full max-w-xs card-title"
+                value={begin}
+                onChange={(e) => setBegin(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <p className="ml-1 text-xs">Finish read</p>
+              <input
+                type="date"
+                placeholder="Finish Read"
+                className="input input-bordered input-xs w-full max-w-xs card-title"
+                value={finish}
+                onChange={(e) => setFinish(e.target.value)}
+                required
+              />
+            </div>
+          </div>
+          <textarea
+            type="text"
+            placeholder="write your thought about book u've read"
+            className="textarea textarea-bordered textarea-lg w-full max-w-xs textarea-primary"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
             required
-          />
-        </div>
-        <textarea
-          type="text"
-          placeholder="write your thought about book u've read"
-          className="textarea textarea-bordered textarea-lg w-full max-w-xs textarea-primary"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-          required
-        ></textarea>
-        <div className="card-actions justify-end">
-          <button
-            className="btn-active btn-neutral rounded-lg bg-purple-600 text-white "
-            disabled={loading}
-            onClick={handleCreateBookList}
-          >
-            Create
-          </button>
+          ></textarea>
+          <div className="card-actions justify-end">
+            <button
+              className="btn-active btn-neutral rounded-lg bg-purple-600 text-white "
+              disabled={loading}
+              onClick={handleCreateBookList}
+            >
+              Create
+            </button>
+          </div>
         </div>
       </div>
     </main>

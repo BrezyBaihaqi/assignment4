@@ -5,7 +5,14 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: ["nord"],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ["Plus Jakarta Sans"],
+        sans: ["Poppins"],
+      },
+    },
+  },
   // adds mui or daisyui plugins here
   plugins: [require("daisyui")],
 };
