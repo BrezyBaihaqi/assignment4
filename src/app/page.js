@@ -1,6 +1,7 @@
 import { BookList } from "@/components/BookList";
 import { CreateList } from "@/components/CreateList";
 import { Header } from "@/components/Header";
+import { Modal } from "@/components/Modal";
 
 export const dynamic = "force-dynamic";
 
@@ -19,7 +20,6 @@ export default async function Home() {
       <Header />
       <div className="max-w-3xl m-auto space-y-5">
         <BookList data={data} />
-        <CreateList />
       </div>
     </main>
   );

@@ -52,7 +52,7 @@ export const Books = ({ item }) => {
   // Saat editMode di pilih
   if (editMode) {
     return (
-      <main className="grid grid-cols-5 h-16">
+      <main className="grid grid-cols-5 h-16 gap-2">
         <input
           type="text"
           placeholder="book name"

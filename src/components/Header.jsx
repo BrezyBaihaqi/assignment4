@@ -13,8 +13,24 @@ export const Header = () => {
             placeholder="search books..."
           />
         </div>
-        <div className="mt-auto mb-auto">
-          <BsBook className="w-7 h-7" />
+        <div className="mt-auto mb-auto dropdown dropdown-hover dropdown-end ">
+          <div tabIndex={0} role="button" className="btn">
+            <BsBook className="w-7 h-7" />
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content z-[1] menu p-0 shadow bg-base-100 rounded-box w-24"
+          >
+            <li>
+              <a>Acoount</a>
+            </li>
+            <li>
+              <a>Setting</a>
+            </li>
+            <li>
+              <a>Log out</a>
+            </li>
+          </ul>
         </div>
       </div>
     </main>

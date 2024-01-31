@@ -33,16 +33,15 @@ export const CreateList = () => {
   }
 
   return (
-    <main className="card card-compact w-96 bg-base-100 shadow-md">
+    <main className="card card-compact bg-base-100">
       <div className="card-body items-center">
         <div className="w-80">
           <input
             type="text"
             placeholder="book name"
-            className="input input-bordered input-md w-full max-w-lg card-title"
+            className="textarea input input-bordered input-md w-full max-w-lg card-title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            required
           />
           <div className="grid grid-cols-2 gap-2">
             <div>
@@ -50,10 +49,9 @@ export const CreateList = () => {
               <input
                 type="date"
                 placeholder="Begin Read"
-                className="input input-bordered input-xs w-full max-w-xs card-title"
+                className="textarea input input-bordered input-xs w-full max-w-xs card-title"
                 value={begin}
                 onChange={(e) => setBegin(e.target.value)}
-                required
               />
             </div>
             <div>
@@ -61,20 +59,18 @@ export const CreateList = () => {
               <input
                 type="date"
                 placeholder="Finish Read"
-                className="input input-bordered input-xs w-full max-w-xs card-title"
+                className="textarea input input-bordered input-xs w-full max-w-xs card-title"
                 value={finish}
                 onChange={(e) => setFinish(e.target.value)}
-                required
               />
             </div>
           </div>
           <textarea
             type="text"
             placeholder="write your thought about book u've read"
-            className="textarea textarea-bordered textarea-lg w-full max-w-xs textarea-primary"
+            className="textarea textarea-bordered textarea-lg w-full max-w-xs "
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
-            required
           ></textarea>
           <div className="card-actions justify-end">
             <button
