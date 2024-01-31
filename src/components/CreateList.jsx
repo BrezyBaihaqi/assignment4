@@ -74,7 +74,7 @@ export const CreateList = () => {
           ></textarea>
           <div className="card-actions justify-end">
             <button
-              className="btn-active btn-neutral rounded-lg bg-purple-600 text-white "
+              className="btn btn-outline btn-success rounded-lg "
               disabled={loading}
               onClick={handleCreateBookList}
             >

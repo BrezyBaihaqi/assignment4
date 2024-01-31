@@ -11,9 +11,9 @@ export const BookList = ({ data }) => {
         <h1 className="p-2 mt-auto font-bold text-lg text-purple-700">
           Book I Have Read
         </h1>
-        <div>
+        <div className="mt-auto mb-auto">
           <button
-            className="text-sm btn-active btn-neutral rounded-lg bg-purple-600 text-white"
+            className="text-sm btn btn-sm btn-active btn-neutral rounded-lg bg-purple-600 text-white"
             onClick={() => document.getElementById("createBook").showModal()}
           >
             add book
@@ -24,7 +24,7 @@ export const BookList = ({ data }) => {
         <table className="table">
           {/* head */}
           <thead>
-            <tr className="grid grid-cols-5 text-left align-middle font-medium bg-purple-200 text-base">
+            <tr className="grid grid-cols-5 text-left align-middle font-medium bg-purple-200 text-base md:text-xs">
               <th>Book Name</th>
               <th>Note</th>
               <th>Begin Read</th>

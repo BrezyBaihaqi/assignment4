@@ -52,7 +52,7 @@ export const Books = ({ item }) => {
   // Saat editMode di pilih
   if (editMode) {
     return (
-      <main className="grid grid-cols-5 h-16 gap-2">
+      <main className="grid grid-cols-5 h-16 gap-2 mx-2 ">
         <input
           type="text"
           placeholder="book name"
@@ -65,7 +65,7 @@ export const Books = ({ item }) => {
         <textarea
           type="text"
           placeholder="write your thought about book u've read"
-          className="textarea textarea-bordered textarea-md w-full max-w-xs textarea-primary"
+          className="textarea textarea-bordered textarea-md w-full max-w-xs"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
           required
@@ -87,7 +87,7 @@ export const Books = ({ item }) => {
           required
         />
         <button
-          className="btn-active btn-neutral rounded-lg bg-purple-600 text-white"
+          className="btn btn-xs btn-active btn-neutral rounded-lg bg-purple-600 text-white"
           onClick={handleUpdate}
         >
           Update
@@ -103,20 +103,32 @@ export const Books = ({ item }) => {
           <tbody>
             {/* row 1 */}
             <tr className="break-all grid grid-cols-5">
-              <td className="">{item.book_name}</td>
-              <td className="">{item.author}</td>
-              <td className="">{item.begin}</td>
-              <td className="">{item.finish}</td>
+              <td>{item.book_name}</td>
+              <td>{item.author}</td>
+              <td>{item.begin}</td>
+              <td>{item.finish}</td>
               <td className="p-1.5">
                 <div className="flex flex-row gap-1 ml-2">
-                  <BsTrash3
-                    className="border rounded-md p-1 h-7 w-7 hover:bg-gray-100"
-                    onClick={handleDelete}
-                  ></BsTrash3>
-                  <BsPencil
-                    className="border rounded-md p-1 h-7 w-7 hover:bg-gray-100"
-                    onClick={() => setEditMode(true)}
-                  ></BsPencil>
+                  <div
+                    className="tooltip hover:tooltip-open tooltip-warning"
+                    data-tip="wanna delete?"
+                  >
+                    <BsTrash3
+                      className="border rounded-md p-1 h-7 w-7 hover:bg-gray-100"
+                      data-tip="wanna delete?"
+                      onClick={handleDelete}
+                    ></BsTrash3>
+                  </div>
+                  <div
+                    className="tooltip hover:tooltip-open tooltip-warning"
+                    data-tip="wanna edit?"
+                  >
+                    <BsPencil
+                      className="tooltip tooltip-open tooltip-warning border rounded-md p-1 h-7 w-7 hover:bg-gray-100"
+                      data-tip="wanna edit?"
+                      onClick={() => setEditMode(true)}
+                    ></BsPencil>
+                  </div>
                 </div>
               </td>
             </tr>
